@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, 
+import { Checkbox } from 'expo-checkbox';
+import {
+    View, 
     Text, 
     StyleSheet, 
     TextInput, 
@@ -8,10 +10,13 @@ import { View,
 } from 'react-native';
 
 class Aula05 extends Component {
+  // contrutor forma tradicional de inicilazer estados ( dados)
   constructor(props) {
     super(props);
     this.state = {
-      
+      nome: '',
+      email: '',
+      lembrarSenha: false,
     };
   }
 
@@ -20,6 +25,8 @@ class Aula05 extends Component {
       <View style={styles.container}>
 
         <View>
+
+            <Text style={ styles.titulo }>LOGIN</Text>
             
              <Image
                 source={require('../img/logo-barao.png') }
@@ -31,27 +38,36 @@ class Aula05 extends Component {
             <Text style={ styles.label }>Nome: </Text>
             <TextInput
                 style={ styles.input }
-                placeholder='     Informe seu nome: '
+                placeholder=' Informe seu nome: '
             />
 
             <Text style={ styles.label }>Email: </Text>
             <TextInput
                 style={ styles.input }
-                placeholder='     Informe seu e-mail: '
+                placeholder=' Informe seu e-mail: '
             />
+            
+            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <Checkbox
+                      value={ this.state.lembrarSenha }
+                      onValueChange={ (valor) => this.setState({ lembrarSenha: valor})}
+                      color={ this.state.lembrarSenha ? '#4630EB': undefined}
+                    />
+                    <Text style={{ color: 'white', marginLeft: 3, fontSize: 12,}}>Lembrar senha</Text>
+                </View>
+                <Text style={{ color: '#39ff14', fontSize: 12}}>Esqueceu a senha?</Text>
+            </View>
 
             <TouchableOpacity style={ styles.botao }>
                 <Text style={ styles.textoBotao }>Entrar</Text>
             </TouchableOpacity>
 
             <Text style={ styles.texto1 }>Não tem conta?
-                 <Text style={ styles.texto2 }>Cadastre-se</Text>
+                <Text style={ styles.texto2 }>Cadastre-se</Text>
             </Text>
         </View>    
         
-
-
-      
       </View>
     );
   }
@@ -87,7 +103,8 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     alignSelf: 'center',
-    marginBottom: 70,
+    marginBottom: 20,
+    marginTop: 20
   },
 
   botao: {
@@ -104,9 +121,23 @@ const styles = StyleSheet.create({
   },
   texto1: {
     color: 'white',
+    fontSize: 15,
+    marginTop: 6,
+    textAlign: 'center',
   },
   texto2: {
-    color: 'blue',
+    color: '#39ff14',
+    //marginRight: 20,
+    marginLeft: 10,
+    fontSize: 15,
+  },
+
+  titulo: {
+    color: '#39ff14',
+    textAlign: 'center',
+    fontSize: 50,
+    marginLeft: 10,
+    fontWeight: 'bold',
   },
 
 });
