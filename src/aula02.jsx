@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 class Aula02 extends Component {
     render() {
-        return(
+        return (
             <View>
                 <Text>Estrutura Padrão</Text>
                 <Text style={ styles.textoCentral }>Estrutura Padrão</Text>
@@ -16,17 +16,16 @@ class Aula02 extends Component {
 export default Aula02;
 
 const styles = StyleSheet.create({
-    textoCentral: {
+    textoCentral:{
         color: 'green',
         fontSize: 30,
-        backgroundColor: 'red',
-         padding: 12
-    },
-
+        backgroundColor: 'black',
+        padding: 12
+    }, 
+    
     textoFinal: {
         backgroundColor: 'blue',
-        color: 'white',
-        fontSize: 20,
-        padding: 10,
+        color:  'white',
+
     }
 })

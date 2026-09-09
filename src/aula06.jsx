@@ -2,66 +2,63 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Button, Image } from 'react-native';
 
 class Aula06 extends Component {
-    constructor(props) {
-      super(props);
 
-      this.state = {
-        nome: 'Gabriel', 
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+        nome: 'João',
         sobrenome: '',
-        imagem: 'https://www.rbsdirect.com.br/imagesrc/25518331.jpg?format=webp&w=1600&h=1600&a=c'  
-      };
-      this.mudarNome = this.mudarNome.bind(this);
-      this.mudarImagem = this.mudarImagem.bind(this);
-    }
-      
-      mudarNome() {
-        this.setState({
-            nome: 'Ronaldinho Gaúcho',
-            sobrenome: 'Becker Miguel'
-        })
-      }
-      mudarImagem() {
-        this.setState({
-          imagem: 'https://conteudo.imguol.com.br/c/esporte/43/2020/08/25/ronaldinho-gaucho-na-chegada-ao-aeroporto-do-galeao-no-rio-de-janeiro-apos-deixar-o-paraguai-1598386479705_v2_1x1.jpg'
-        })
-      }
-    
+        imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-BdzfufHwk2fwYfrZUMI_hLdztXGGnwtA98OyJOxqLg&s=10'
+    };
+    this.mudarNome = this.mudarNome.bind(this);
+    this.mudarImagem = this.mudarImagem.bind(this);
+  }
 
-    render() {
+  mudarNome() {
+    this.setState({
+        nome: 'Ronaldinho Gaúcho',
+        sobrenome: 'de Lima'
+    })
+  }
+
+  mudarImagem() {
+      this.setState({
+          imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlOFMa6DXaR6cbC1qGRAcrwbY8mF_J_oysHUo7PJaRHpca0lE8L8VfUuc&s=10'
+      })
+  }
+
+  render() {
     return (
       <View style={styles.container}>
         <ScrollView>
+          <Text>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Tempore repellendus, quod earum culpa esse et repellat dolor 
+            aut enim officiis est cumque ut eveniet suscipit, optio voluptas? Odit, quam rem!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Tempore repellendus, quod earum culpa esse et repellat dolor 
+            aut enim officiis est cumque ut eveniet suscipit, optio voluptas? Odit, quam rem!
+          </Text>
 
-            <Text>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                 Culpa, ipsam tempore ullam velit ipsa earum qui libero, 
-                 aperiam laborum maiores officiis! Reprehenderit dolore 
-                 optio eum iure ex odit a laborum?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                 Culpa, ipsam tempore ullam velit ipsa earum qui libero, 
-                 aperiam laborum maiores officiis! Reprehenderit dolore 
-                 optio eum iure ex odit a laborum?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </Text>
+          <Text style={{ fontSize: 21, color: 'red', marginTop: 50 }}>
+              {this.state.nome} { this.state.sobrenome }
+          </Text>
 
-            <Text style={{ fontSize: 21, color: 'red', marginTop: 50 }}>
-                { this.state.nome } { this.state.sobrenome }
-            </Text>
+          <Button
+          title='Mostrar nome'
+          onPress={ this.mudarNome }
+          />
 
-              <Button
-              title='Mostrar nome'
-              onPress={ this.mudarNome }
-              />
+          <Image
+              source={{ uri: this.state.imagem }}
+              style={{ width: 300, height: 300 }}
+          />
 
-
-              <Image
-              source={{uri: this.state.imagem }} 
-              style={{ width: 300, height: 300}}
-              />
-               <Button
-              title='Mudar Imagem'
+          <Button
+              title='Mudar imagem'
               onPress={ this.mudarImagem }
-              />
+          />
 
 
         </ScrollView>
@@ -78,6 +75,6 @@ const styles = StyleSheet.create({
   },
 });
 
-//colocar o sobrenome e fazer aparecer no click do button
+//colocar o sobrenome e fazer aparecer no click do button 
 
 export default Aula06;

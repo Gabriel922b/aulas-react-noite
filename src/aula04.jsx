@@ -11,14 +11,15 @@ class Aula04 extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Image
-        source={require('../assets/icon.png')}
-        style={ styles.icon }
+      <View style={ styles.container }>
+
+        <Image 
+            source={ require('../assets/icon.png' )}
+            style= { styles.icon }
         />
-        <Image
-        source={{uri: 'https://i1.sndcdn.com/artworks-MWXlmpf6ZKJvOrp8-5wSlsQ-t500x500.jpg' }}
-        style={ styles.icon }
+        <Image 
+            source={{ uri: 'https://media.newyorker.com/photos/5909515e2179605b11ad2fc6/master/w_2560%2Cc_limit/godzilla-580.jpg' }}
+            style= { styles.icon }
         />
 
       </View>
