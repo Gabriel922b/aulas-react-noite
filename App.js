@@ -7,7 +7,8 @@
 //import Aula07 from "./src/aula07";
 //import Aula08 from "./src/aula08";
 //import Aula09 from "./src/aula09";
-import Aula10 from "./src/aula10";
+//import Aula10 from "./src/aula10";
+import Aula11 from "./src/aula11";
 
 
 
@@ -23,7 +24,8 @@ export default function App() {
     //<Aula07 />
     //<Aula08 />
     //<Aula09 />
-    <Aula10 />
+    //<Aula10 />
+    <Aula11 />
     
   );
 }
