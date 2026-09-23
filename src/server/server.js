@@ -33,3 +33,14 @@ app.post('/salvar', (req, res) => {
 })
 
 app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
+
+//instalar os seguintes comandos node para configuraçao e 
+//comunicaçao com o myaql
+
+//npm install express
+
+//npm install mysql2
+
+//npm install mysql2 cors
+
+//npm install cors
