@@ -9,7 +9,9 @@
 //import Aula09 from "./src/aula09";
 //import Aula10 from "./src/aula10";
 //import Aula11 from "./src/aula11";
-import Atividade01 from "./src/telaAtividade01";
+//import Atividade01 from "./src/telaAtividade01";
+//import Atividade02 from "./src/telaAtividade02";
+import Tela01 from "./src/appTela01";
 
 
 
@@ -27,7 +29,9 @@ export default function App() {
     //<Aula09 />
     //<Aula10 />
     //<Aula11 />
-    <Atividade01 />
+    //<Atividade01 />
+    //<Atividade02 />
+    <Tela01 />
     
   );
 }
