@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 class Tela01 extends Component {
   constructor(props) {
@@ -47,12 +47,23 @@ class Tela01 extends Component {
                         style={styles.input}
                         placeholder='senha'
                         placeholderTextColor="#4caf50"
-                        keyboardType='email-address'
-                    />
+                        keyboardType='password'
+                     />
+
+                      <TouchableOpacity style={ styles.forgotPassword}>
+                        <Text style={{ color: '#000', textDecorationLine: 'underline'}}>Esqueci Minha Senha</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity style={ styles.button}>
+                        <Text style={ styles.buttonText}>Entrar</Text>
+                      </TouchableOpacity>
             </View>
 
             <View style={styles.bloco3}>
-
+                <Text style={ styles.footerText}> Nao tem conta?</Text>
+                <TouchableOpacity>
+                  <Text style={ styles.linkText }> Cadastra-se</Text>
+                </TouchableOpacity>
             </View>
 
       </View>
@@ -75,13 +86,14 @@ const styles = StyleSheet.create({
 
   bloco2: {
     flex: 1,
+    width: '80%',
   },
 
   bloco3: {
-    borderColor: 'black',
-    borderWidth: 2,
-    height: 50,
+    height: 60,
     width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 
   divisor: {
@@ -122,8 +134,37 @@ const styles = StyleSheet.create({
     padding: 15,
     marginBottom: 15,
     color: 'black',
-  }
+  },
 
+  forgotPassword: {
+    alignSelf: 'center',
+    marginBottom: 30,
+  },
+
+  button: {
+    width: '100%',
+    backgroundColor: '#4caf50',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 15,
+    alignItems: 'center',
+  },
+
+  buttonText: {
+    color: '#fff',
+    fontsize: 18,
+    fontWeight: 'bold',
+  },
+
+  footerText: {
+    color: '#000',
+  },
+
+  linkText: {
+    color: '#000',
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
+  },
 
 });
 
