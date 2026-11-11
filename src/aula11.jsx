@@ -22,7 +22,7 @@ class Aula11 extends Component {
         }
 
         // CORREÇÃO 1: Removido o espaço e alterado para http
-        const IP_DA_SUA_MAQUINA = 'http://192.168.0.229:3000';
+        const IP_DA_SUA_MAQUINA = 'http://192.168.0.228:3000';
 
         try {
             const response = await fetch(`${IP_DA_SUA_MAQUINA}/salvar`, {

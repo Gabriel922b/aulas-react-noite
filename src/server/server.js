@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//Conexão com o banco de dados mysql
+//CONEXÃO COM O BANCO DE DADOS 
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -16,15 +16,15 @@ const db = mysql.createConnection({
 
 db.connect( err => {
     if( err ) console.log('Erro ao conectar no MySQL: ', err );
-    else console.log('Conectado com sucesso!')
+    else console.log('Conectado com Sucesso!')
 })
 
-//Rota para salvar os dados recebidos do app
+//ROTA PARA SALVAR OS DADOS RECEBIDOS DO APP
 app.post('/salvar', (req, res) => {
     const { campo1, campo2 } = req.body;
-    const query = 'INSERT INTO mensagens (campo1, campo2) VALUES (?,?)'
-
-    db.query(query, [campo1, campo2], (err, result )=>{
+    const query = 'INSERT INTO mensagens (campo1, campo2) VALUES (?,?)';
+    
+    db.query(query, [campo1, campo2], (err, result) => {
         if(err) {
             return res.status(500).json({erro: 'Erro ao salvar no banco.'})
         }
@@ -34,8 +34,8 @@ app.post('/salvar', (req, res) => {
 
 app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
 
-//instalar os seguintes comandos node para configuraçao e 
-//comunicaçao com o myaql
+//INSTALAR OS SEGUINTES COMANDOS NODE PARA CONFIGURAÇÃO E
+//COMUNICAÇÃO COM O MYSQL:
 
 //npm install express
 

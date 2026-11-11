@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 
-class Aula08 extends Component {
+class Aula09 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,7 +71,7 @@ class Aula08 extends Component {
   }
 }
 
-export default Aula08;
+export default Aula09;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

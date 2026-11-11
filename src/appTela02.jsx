@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity,} from 'react-native';
 
-// Importacoes do FireBase (v9/v10 modular)
+// IMPORTAÇÕES DO FIREBASE (V9/V10 MODULAR)
 import { initializeApp, initializeAppCheck } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { getfirestore, doc, setDoc } from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPaassword } from 'firebase/auth';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
-//Inicializa o firebase 
+
+//Inicializa o FIREBASE
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDpP1nQPTjjB-slSKt38WMniAvn8mIOQoo",
-  authDomain: "primeiro-projeto-noite-1b040.firebaseapp.com",
-  projectId: "primeiro-projeto-noite-1b040",
-  storageBucket: "primeiro-projeto-noite-1b040.firebasestorage.app",
-  messagingSenderId: "1001686671130",
-  appId: "1:1001686671130:web:ec0b4f58f3f6cfcc9516a3"
+  apiKey: "AIzaSyBgjg_DSbRW5HpCLtyVFlbRkGchX1_qBj0",
+  authDomain: "primeiro-projeto-noite-1d0d3.firebaseapp.com",
+  projectId: "primeiro-projeto-noite-1d0d3",
+  storageBucket: "primeiro-projeto-noite-1d0d3.firebasestorage.app",
+  messagingSenderId: "28989572588",
+  appId: "1:28989572588:web:6413ef0ff7bd3d6bb82cc9"
 };
-
 
 class Tela02 extends Component {
   constructor(props) {
@@ -226,7 +227,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  dropdownList:  {
+  dropdownList: {
     marginTop: 5,
     borderWidth: 1,
     borderColor: '#4caf50',
@@ -235,19 +236,18 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-
   dropdownArrow: {
     position: 'absolute',
     right: 15,
     color: '#4caf50',
     fontSize: 14
-  },  
-  
+  },    
+
   dropdownItem: {
     padding: 15,
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#eee'
   },
 
   drompdownItemText: {
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
 
   drompdownItemTextSelected: {
     color: '#4caf50',
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
 
   button: {
@@ -267,15 +267,13 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 8,
     marginBottom: 15,
-    alignItems:'center',
-
+    alignItems: 'center',
   },
 
   buttonText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
-
   },
 
   bloco3: {

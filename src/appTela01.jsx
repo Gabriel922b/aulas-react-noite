@@ -5,8 +5,8 @@ class Tela01 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: ''
+    email: '',
+    password: ''
     };
   }
 
@@ -14,9 +14,7 @@ class Tela01 extends Component {
     const TAMANHO = 80;
     return (
       <View style={styles.container}>
-            <View style={styles.bloco1}>
-  
-            </View>
+            <View style={ styles.bloco1 }></View>
 
             <View style={ styles.divisor }>
                 <Image
@@ -33,44 +31,47 @@ class Tela01 extends Component {
                 />
             </View>
 
-            <View style={styles.bloco2}>
-                    <Text style={ styles.welcomeText }>Bem-Vindo!</Text>
-                    <Text style={ styles.subText }>Acesse sua conta</Text>
+            <View style={ styles.bloco2 }> 
+                <Text style={ styles.welcomeText }>Bem-vindo!</Text>
+                <Text style={ styles.subText }>Acese sua conta</Text>
 
-                    <TextInput
-                        style={styles.input}
-                        placeholder='E-mail'
-                        placeholderTextColor="#4caf50"
-                        keyboardType='email-address'
-                    />
-                     <TextInput
-                        style={styles.input}
-                        placeholder='senha'
-                        placeholderTextColor="#4caf50"
-                        keyboardType='password'
-                     />
+                <TextInput
+                    style={ styles.input }
+                    placeholder='E-mail'
+                    placeholderTextColor={ "#4caf50" }
+                    keyboardType='email-address'
+                />
 
-                      <TouchableOpacity style={ styles.forgotPassword}>
-                        <Text style={{ color: '#000', textDecorationLine: 'underline'}}>Esqueci Minha Senha</Text>
-                      </TouchableOpacity>
+                <TextInput
+                    style={ styles.input }
+                    placeholder='Senha'
+                    placeholderTextColor={ "#4caf50" }
+                    keyboardType='password'
+                />
 
-                      <TouchableOpacity style={ styles.button}>
-                        <Text style={ styles.buttonText}>Entrar</Text>
-                      </TouchableOpacity>
-            </View>
-
-            <View style={styles.bloco3}>
-                <Text style={ styles.footerText}> Nao tem conta?</Text>
-                <TouchableOpacity>
-                  <Text style={ styles.linkText }> Cadastra-se</Text>
+                <TouchableOpacity style={ styles.forgotPassword}>
+                  <Text style={{ color: '#000', textDecorationLine:'underline'}}> Esqueci minha senha </Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity style={ styles.button}>
+                  <Text style={ styles.buttonText }> Entrar </Text>
+                </TouchableOpacity>
+
             </View>
 
+            <View style={ styles.bloco3 }>
+                  <Text style={ styles.footerText }> Ainda não tem conta?</Text>
+
+                  <TouchableOpacity>
+                    <Text style={ styles.linkText }> Cadastre-se </Text>
+                  </TouchableOpacity>
+            </View>
       </View>
     );
   }
 }
 
+export default Tela01;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  bloco1:{
+  bloco1: {
     backgroundColor: 'black',
     width: '100%',
     height: 50,
@@ -86,13 +87,15 @@ const styles = StyleSheet.create({
 
   bloco2: {
     flex: 1,
-    width: '80%',
+    width: '90%',
+
   },
 
   bloco3: {
-    height: 60,
+    height: 100,
     width: '100%',
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'center',
   },
 
@@ -103,10 +106,10 @@ const styles = StyleSheet.create({
   },
 
   imagem: {
-    position: 'absolute',
+    position:'absolute',
     alignSelf: 'center',
     borderWidth: 3,
-    borderColor: '#fff',
+    borderColor: '#ffff',
     backgroundColor: 'black',
   },
 
@@ -115,8 +118,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     marginBottom: 5,
-    marginTop: 60,
+    marginTop: 60, 
     textAlign: 'center',
+
   },
 
   subText: {
@@ -134,16 +138,18 @@ const styles = StyleSheet.create({
     padding: 15,
     marginBottom: 15,
     color: 'black',
+    
   },
 
   forgotPassword: {
     alignSelf: 'center',
-    marginBottom: 30,
+    marginBottom: 30
   },
 
   button: {
     width: '100%',
     backgroundColor: '#4caf50',
+    borderColor: '#000',
     borderRadius: 8,
     padding: 15,
     marginBottom: 15,
@@ -152,8 +158,8 @@ const styles = StyleSheet.create({
 
   buttonText: {
     color: '#fff',
-    fontsize: 18,
-    fontWeight: 'bold',
+    fontSize: 18,
+    fontWeight: 'bold'
   },
 
   footerText: {
@@ -163,9 +169,7 @@ const styles = StyleSheet.create({
   linkText: {
     color: '#000',
     fontWeight: 'bold',
-    textDecorationLine: 'underline',
+    textDecorationLine: 'underline'
   },
-
 });
 
-export default Tela01;
